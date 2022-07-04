@@ -1,0 +1,45 @@
+{
+  "name": "vue-electron-starter-desktop",
+  "description": "This is a quick start project template for desktop application with vue + element-ui + electron.",
+  "version": "1.0.1",
+  "main": "main/index.js",
+  "scripts": {
+    "electron:preview": "electron .",
+    "electron:builder:pack": "electron-builder --dir",
+    "start:dir:packed": "cd ./dist/win-unpacked && start .",
+    "start:exe:packed": "start ./dist/win-unpacked/vue-electron-starter-desktop.exe",
+    "electron:builder:dist": "electron-builder",
+    "start:exe:disted": "start ./dist/vue-electron-starter-desktop-setup-1.0.1.exe",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "vue.electron.starter",
+    "copyright": "vue-electron-starter-desktop",
+    "productName": "vue-electron-starter-desktop",
+    "dmg": {
+      "background": "assets/images/logo/icon-512x512.png",
+      "window": {
+        "x": 100,
+        "y": 100,
+        "width": 500,
+        "height": 300
+      }
+    },
+    "win": {
+      "asar": false,
+      "artifactName": "${productName}-setup-${version}.${ext}",
+      "icon": "assets/images/logo/icon-256x256.ico"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^12.0.1",
+    "electron-builder": "^22.10.5",
+    "electron-packager": "^15.2.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "iconv-lite": "^0.6.3"
+  }
+}
