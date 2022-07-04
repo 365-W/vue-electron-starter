@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "clear": "clear-static.bat",
-    "clear && build": "clear-static.bat && vue-cli-service build --no-clean",
+    "clear & build": "clear-static.bat && vue-cli-service build --no-clean",
     "build": "vue-cli-service build --no-clean",
     "lint": "vue-cli-service lint"
   },

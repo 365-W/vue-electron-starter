@@ -17,7 +17,7 @@
     "copyright": "vue-electron-starter-desktop",
     "productName": "vue-electron-starter-desktop",
     "dmg": {
-      "background": "assets/images/logo/icon-512x512.png",
+      "background": "static/assets/images/logo/512.png",
       "window": {
         "x": 100,
         "y": 100,
@@ -28,7 +28,7 @@
     "win": {
       "asar": false,
       "artifactName": "${productName}-setup-${version}.${ext}",
-      "icon": "assets/images/logo/icon-256x256.ico"
+      "icon": "static/assets/images/icon/256.ico"
     }
   },
   "author": "",
