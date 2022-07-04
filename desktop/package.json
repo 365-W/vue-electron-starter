@@ -1,45 +1,40 @@
 {
   "name": "vue-electron-starter-desktop",
-  "description": "This is a quick start project template for desktop application with vue + element-ui + electron.",
+  "description": "This is a quick start project template for desktop application with VueJS + ElementUI + Electron.",
   "version": "1.0.1",
+  "license": "MIT",
+  "author": "Mark Yuan",
   "main": "main/index.js",
   "scripts": {
     "electron:preview": "electron .",
     "electron:builder:pack": "electron-builder --dir",
-    "start:dir:packed": "cd ./dist/win-unpacked && start .",
-    "start:exe:packed": "start ./dist/win-unpacked/vue-electron-starter-desktop.exe",
     "electron:builder:dist": "electron-builder",
-    "start:exe:disted": "start ./dist/vue-electron-starter-desktop-setup-1.0.1.exe",
+    "start:packed:dir": "cd ./dist/win-unpacked && start .",
+    "start:packed:exe": "start ./dist/win-unpacked/vue-electron-starter-desktop.exe",
+    "start:disted:exe": "start ./dist/vue-electron-starter-desktop-setup-1.0.1.exe",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "build": {
-    "appId": "vue.electron.starter",
-    "copyright": "vue-electron-starter-desktop",
-    "productName": "vue-electron-starter-desktop",
-    "dmg": {
-      "background": "static/assets/images/logo/512.png",
-      "window": {
-        "x": 100,
-        "y": 100,
-        "width": 500,
-        "height": 300
-      }
-    },
-    "win": {
-      "asar": false,
-      "artifactName": "${productName}-setup-${version}.${ext}",
-      "icon": "static/assets/images/icon/256.ico"
-    }
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "iconv-lite": "^0.6.3"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "electron": "^12.0.1",
     "electron-builder": "^22.10.5",
     "electron-packager": "^15.2.0"
   },
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "iconv-lite": "^0.6.3"
+  "build": {
+    "appId": "vue.electron.starter",
+    "productName": "vue-electron-starter-desktop",
+    "copyright": "${productName}",
+    "dmg": {
+      "background": "static/assets/images/logo/512.png",
+      "window": {"x": 100, "y": 100, "width": 500, "height": 300}
+    },
+    "win": {
+      "asar": true,
+      "artifactName": "${productName}-setup-${version}.${ext}",
+      "icon": "static/assets/images/icon/256.ico"
+    }
   }
 }
