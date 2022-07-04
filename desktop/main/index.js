@@ -147,7 +147,7 @@ const topMenu = [
                 label: '更多信息',
                 click: async () => {
                     const {shell} = require('electron')
-                    await shell.openExternal('https://www.baidu.com')
+                    await shell.openExternal('https://github.com/fkeway/vue-electron-starter')
                 }
             }
         ]
